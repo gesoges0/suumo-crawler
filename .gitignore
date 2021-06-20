@@ -1,3 +1,7 @@
+src/chromedriver
+src/jquery-3.6.0.min.js
+src/html2canvas.js
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

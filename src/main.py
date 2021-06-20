@@ -2,7 +2,7 @@ from argparse import ArgumentParser
 from os import pardir
 
 from setting import change_setting
-from suumo import scrape_and_save
+from suumo import scrape_and_save, slack
 
 if __name__ == '__main__':
     parser = ArgumentParser(description='suumo scraper')
@@ -18,6 +18,13 @@ if __name__ == '__main__':
     # スクレイピングしてDBへ保存
     parser_scrape_and_save = subparsers.add_parser('scrape', help='スクレイピングしてDBへ保存')
     parser_scrape_and_save.set_defaults(func=scrape_and_save)
+
+    # slackへ投稿
+    parser_slack = subparsers.add_parser('slack', help='slackへ投稿')
+    parser_slack.add_argument('DATE', type=str, help='データを取得した日付')
+    parser_slack.set_defaults(func=slack)
+
+
 
     args = parser.parse_args()
     args.func(args)
