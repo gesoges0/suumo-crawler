@@ -3,10 +3,15 @@ scrape suumo information and make suumo db with mongo DB
 
 ## What is this?
 ![slackへsuumoの情報を投稿できるよ](images/img1.png)
+
 slackへsuumoの情報を投稿できるよ
+
 ![suumoのページは更新が激しいのでローカルに画像をおとせるよ](images/img0.png)
+
 suumoのページは更新が激しいのでローカルに画像をおとせるよ
+
 ![賃貸情報を画像で観ることできるよ](images/img2.png)
+
 seleniumからhtml2canvas.jsを実行して賃貸情報を画像で取れるよ
 
 
